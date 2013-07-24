@@ -10,18 +10,19 @@ Your solution should be faster than O(n) per word checked, where n is the length
 
 For example:
 
-> sheeeeep
-sheep
-> peepple
-people
-> sheeple
-NO SUGGESTION
+    > sheeeeep
+    sheep
+    > peepple
+    people
+    > sheeple
+    NO SUGGESTION
+
 The class of spelling mistakes to be corrected is as follows:
 
-Case (upper/lower) errors: "inSIDE" => "inside"
-Repeated letters: "jjoobbb" => "job"
-Incorrect vowels: "weke" => "wake"
-Any combination of the above types of error in a single word should be corrected (e.g. "CUNsperrICY" => "conspiracy").
+    Case (upper/lower) errors: "inSIDE" => "inside"
+    Repeated letters: "jjoobbb" => "job"
+    Incorrect vowels: "weke" => "wake"
+    Any combination of the above types of error in a single word should be corrected (e.g. "CUNsperrICY" => "conspiracy").
 
 If there are many possible corrections of an input word, your program can choose one in any way you like. It just has to be an English word that is a spelling correction of the input by the above rules.
 
