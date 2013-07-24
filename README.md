@@ -39,8 +39,17 @@ Last thing: while you _can_ pipe to the command line, reading in the dictionary 
 Examples:
 
     ruby spellcheck.rb                # run in manual mode
+    DEBUG=true ruby spellcheck.rb     # view entire walk through letters
     ruby test.rb                      # full auto!
     RUNS=200 ruby test.rb
     RUNS=25 STDIN=true ruby test.rb
+    
+Cheat Codes
+-----------
+Two options for cheating on this:
+
+1. Set up Solr / Sunspot with a dictionary and use their spellcheck algorithm. I set up a way to do that [here](http://atevans.com/spellchecking-with-sunspot-and-solr)
+
+2. Google the word and scrape the spellcheck suggestion. Easy with [HTTParty](https://github.com/jnunemaker/httparty)
 
 Cheers,
