@@ -34,4 +34,13 @@ This solution could probably use some refactoring. My first thought was to use a
 
 There is also a nasty problem with long strings of vowels - theoretically, you'd have to run through every permutation to avoid missing cases. I capped the length of vowel permutations at two, because it's pretty unlikely you'll have something like QUEUEING misspelled as QUUUUUNG or something similar. Realistically, you're not likely to have more than two different vowels in a row before you can check other combinations.
 
+Last thing: while you _can_ pipe to the command line, reading in the dictionary every time is quite slow. Test.rb includes two environment variables: RUNS and STDIN. RUNS controls the total number of misspelled words generated and checked. STDIN will force the program to pipe to stdin instead of running it all in Ruby (ie, the _really slow way_). 
+
+Examples:
+
+    ruby spellcheck.rb                # run in manual mode
+    ruby test.rb                      # full auto!
+    RUNS=200 ruby test.rb
+    RUNS=25 STDIN=true ruby test.rb
+
 Cheers,
